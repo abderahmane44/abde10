@@ -313,8 +313,8 @@ client.channels.get("470259562121920512").sendEmbed(embed)
 
 client.on('ready', () => {
   client.user.setPresence('dnd')
-  client.user.setActivity(`+Help | Servers: ${client.guilds.size} | Version: 1.0.1`)
-  console.log(' Logged in as Infinty Bot ')
+  client.user.setActivity(`+Help|- Aurora , Server .`)
+  console.log(' Logged in as AB Bot ')
 });
 
 
@@ -375,55 +375,6 @@ setInterval(function(){})
 	    
 	    
 
-client.on('message', message => {
-    if(message.content == prefix + 'servers') {
-             if(!message.author.id === '244888652004458497') return;
-    var gimg;
-    var gname;
-    var gmemb;
-    var gbots;
-    var groles;
-    var servers = client.guilds;
-    servers.forEach((g)=>{
-    gname = g.name;
-    gimg = g.iconURL;
-    gmemb = g.members.size;
-    let serv = new Discord.RichEmbed()
-    .setAuthor(gname,gimg)
-    .setThumbnail(gimg)
-    .addField('Server Member Count',gmemb = g.members.size)
-    .setColor('RANDOM')
-    message.channel.send(`
-    
-            `);
-          message.channel.sendEmbed(serv);
-    }) 
-    }
-    });
-    
-    client.on('message', message => {
-    if(message.content == prefix + 'servers') {
-             if(!message.author.id === '244888652004458497') return;
-    var gimg;
-    var gname;
-    var gmemb;
-    var gbots;
-    var groles;
-    var servers = client.guilds;
-    servers.forEach((g)=>{
-    gname = g.name;
-    gimg = g.iconURL;
-    gmemb = g.members.size;
-    let serv = new Discord.RichEmbed()
-    message.channel.send(`
-    **-------------------------**
-      Server Name : **${gname}**
-      Server MemberCount : **${gmemb} **
-      **---------------------------**
-            `);
-    }) 
-    }
-    });
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
@@ -555,11 +506,6 @@ client.on('message', msg => {
 
 
 
-client.on('message', msg => {
-  if (msg.content === '+music') {
-    msg.reply(':envelope: | تم ارسال اوامر الموسيقى في الخاص');
-  }
-});
 
 
    
@@ -778,17 +724,6 @@ if (message.content.startsWith(prefix + 'trans')) {
 
 
 
-   client.on('message', message => {
-     if (message.content === "+support") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#9B59B6")
-  .addField(" ** :scales:سيرفر الدعم:scales:  **" , "  **https://discord.gg/5v7TKCW**")
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
   
@@ -1457,7 +1392,7 @@ client.on('message', message => {
 	
 	
 client.on("message", (message) => {
-if (message.content.startsWith("*ct")) {
+if (message.content.startsWith("+ct")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
@@ -2091,40 +2026,8 @@ const codes = {
 
 
 
-	   client.on("message", message => {
- if (message.content === "+music") {
-        message.react("📫")
-	           message.react("✅")
-  const embed = new Discord.RichEmbed() 
-      .setColor("#8325c0")
-      .setThumbnail(message.author.avatarURL)
-      .setDescription(`
-
-اوامـــر الموسيقى
-
-**⤠ +play ⥨ لتشغيل اغنية
-⤠ +skip ⥨ لتجاوز الاغنية الحالية
-⤠ +pause ⥨ لايقاف الاغنية
-⤠ +resume ⥨ لامواصلة الاغنية
-⤠ +vol ⥨ لتغيير درجة الصوت 100 - 0
-⤠ +stop ⥨ لاخراج البوت من رومك
-⤠ +join ⥨ لادخال البوت الى رومك الصوتي**
-
-`)
 
 
-message.author.sendEmbed(embed)
-
-
-
-}
-});
-
-
-
-client.on("guildMemberAdd", member => {
-  client.channels.find('id', '555072038335807491').send(`**welcome to Oméega Bot , : [ ${member} ]**`)
-});
 
 
 
