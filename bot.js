@@ -311,11 +311,6 @@ client.channels.get("470259562121920512").sendEmbed(embed)
 
 
 
-client.on('ready', () => {
-  client.user.setPresence('dnd')
-  client.user.setActivity(`+Help|- Aurora , Server .`)
-  console.log(' Logged in as AB Bot ')
-});
 
 
 
@@ -386,7 +381,7 @@ client.on("guildMemberAdd", member => {
 
 
 client.on('message', function(message) {
-	const myID = "538349275713634315";
+	const myID = "470741738219372545";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -396,7 +391,7 @@ client.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "stream")) {
+    } else if(message.content.startsWith(prefix + "st")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setGame(args , 'https://twitch.tv/6xlez1');
@@ -404,7 +399,7 @@ client.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "listen")) {
+    } else if(message.content.startsWith(prefix + "li")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'LISTENING'});
@@ -412,7 +407,7 @@ client.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "watch")) {
+    } else if(message.content.startsWith(prefix + "wat")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'WATCHING'});
